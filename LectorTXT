@@ -1,0 +1,21 @@
+archivo = open ("TextoPrueba.txt","r")
+texto = archivo.read().split(',')
+print("El archivo dice: ", texto)
+
+correcto = ['Dale','a','tu','cuerpo','alegria','macarena']
+
+archivo = open("TextoPrueba.txt","r")
+textaux = archivo.read().split(',')
+aux = ""
+
+for i in range(0, len(texto)):
+    for j in range (0, len(texto)):
+        if texto[i] == correcto[j]:
+            textaux[j] = correcto[j]
+
+for i in range(0, len(texto)):
+    aux = aux + textaux[i]
+    aux = aux + " "
+
+
+print("El texto correcto es: ", aux)
